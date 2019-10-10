@@ -1,0 +1,14 @@
+<h1>Users</h1>
+
+<ul>
+  <li class="none" *ngFor="let user of users$">
+    <div class="card">
+      <a class="username" routerLink="/details/{{user.id}}">{{ user.name }}</a>
+      <hr class="divider" />
+      <ul>
+        <li>{{ user.email }}</li>
+        <li><a href="http://{{ user.website }}">{{ user.website }}</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
